@@ -1,14 +1,13 @@
 <form id="userForm" th:object="${userForm}" method="post" class="form" role="form">
 	<input class="form-control" type="hidden" th:field="${userForm.id}">
 	<div class="form-group row">
-		<label class="col-lg-3 col-form-label form-control-label">First name</label>
+		<label class="col-lg-3 col-form-label form-control-label">Nombre</label>
 		<div class="col-lg-9">
 			<input class="form-control" type="text" th:field="${userForm.firstName}">
 		</div>
 	</div>
 	<div class="form-group row">
-		<label class="col-lg-3 col-form-label form-control-label">Last
-			name</label>
+		<label class="col-lg-3 col-form-label form-control-label">Apellidos</label>
 		<div class="col-lg-9">
 			<input class="form-control" type="text" th:field="${userForm.lastName}">
 		</div>
@@ -20,13 +19,13 @@
 		</div>
 	</div>
 	<div class="form-group row">
-		<label class="col-lg-3 col-form-label form-control-label">Depto</label>
+		<label class="col-lg-3 col-form-label form-control-label">Departamento</label>
 		<div class="col-lg-9">
 			<input class="form-control" type="number" th:field="${userForm.depto}">
 		</div>
 	</div>
 	<div class="form-group row">
-		<label class="col-lg-3 col-form-label form-control-label">Username</label>
+		<label class="col-lg-3 col-form-label form-control-label">Usuario</label>
 		<div class="col-lg-9">
 			<input class="form-control" type="text" th:field="${userForm.username}">
 		</div>
@@ -41,22 +40,22 @@
 		</div>
 	</div>
 	<div class="form-group row">
-		<label class="col-lg-3 col-form-label form-control-label">Password</label>
+		<label class="col-lg-3 col-form-label form-control-label">Contraseña</label>
 		<div class="col-lg-9">
 			<input class="form-control" type="password" th:field="${userForm.password}">
 		</div>
 	</div>
 	<div class="form-group row">
-		<label class="col-lg-3 col-form-label form-control-label">Confirm</label>
+		<label class="col-lg-3 col-form-label form-control-label">Confirmar contraseña</label>
 		<div class="col-lg-9">
 			<input class="form-control" type="password" th:field="${userForm.confirmPassword}">
 		</div>
 	</div>
 	<div class="form-group row">
 		<div class="col-lg-12 text-center">
-			<input type="reset" class="btn btn-secondary" value="Cancel">
+			<input type="reset" class="btn btn-secondary" value="Cancelar">
 			<input type="button" class="btn btn-primary"
-				value="Save Changes">
+				value="Registrarse">
 		</div>
 	</div>
 </form>

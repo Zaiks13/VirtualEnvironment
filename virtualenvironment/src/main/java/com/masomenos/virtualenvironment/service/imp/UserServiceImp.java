@@ -64,5 +64,12 @@ public class UserServiceImp implements UserService{
 		mapUser(fromUser, toUser);
 		return userRepository.save(toUser);
 	}
+	
+	public void deleteUser(Long id) throws Exception {
+		User user = userRepository.findById(id)
+				.orElseThrow(() -> new Exception("El usuario no existe -"+this.getClass().getName()));
+
+		userRepository.delete(user);
+	}
 
 }

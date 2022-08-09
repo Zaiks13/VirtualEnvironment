@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>User Information and Form</title>
+	<title>Informacion de Usuario y Formulario</title>
 
 	<!--JQUERY-->
 	<script
@@ -43,17 +43,17 @@
 	<div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
 		<ul class="nav nav-tabs justify-content-end">
 			<li class="nav-item">
-			<a class="nav-link " th:classappend="${listTab}" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List</a>
+			<a class="nav-link " th:classappend="${listTab}" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Lista</a>
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" th:classappend="${formTab}" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Form</a>				   	
+			<a class="nav-link" th:classappend="${formTab}" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Formulario</a>				   	
 			</li>
 		</ul>
 		<div class="tab-content" id="myTabContent">
 			<div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
 				<div class="card">
 					<div class="card-header">
-						<h4>Roster</h4>
+						<h4>Registros</h4>
 					</div>
 					<div class="card-body">
 						<div th:include="user-form/user-list.html" th:remove="tag"></div>
@@ -63,7 +63,7 @@
 			<div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
 				<div class="card">
 					<div class="card-header">
-						<h4>User Information</h4>
+						<h4>Informacion de Usuario</h4>
 					</div>
 					<div class="card-body">
 						<div th:include="user-form/user-form.html" th:remove="tag"></div>

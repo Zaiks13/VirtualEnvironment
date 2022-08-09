@@ -10,11 +10,6 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 @Entity
 public class Role implements Serializable {
 
@@ -30,4 +25,28 @@ public class Role implements Serializable {
 	
 	@Column
 	private String description;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }

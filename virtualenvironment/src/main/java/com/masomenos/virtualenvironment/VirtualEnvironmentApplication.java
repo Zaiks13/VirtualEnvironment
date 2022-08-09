@@ -1,4 +1,4 @@
-package com.developer.masomenos.ve;
+package com.masomenos.virtualenvironment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

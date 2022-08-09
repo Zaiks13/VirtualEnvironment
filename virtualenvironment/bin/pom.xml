@@ -8,10 +8,10 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.developer.masomenos.ve</groupId>
-	<artifactId>VirtualEnvironment</artifactId>
+	<groupId>com.masomenos</groupId>
+	<artifactId>virtualenvironment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>VirtualEnvironment</name>
+	<name>Virtual Environment</name>
 	<description>Making our lifes easier</description>
 	<properties>
 		<java.version>17</java.version>
@@ -37,8 +37,8 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>

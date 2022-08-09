@@ -46,9 +46,11 @@ public class UserController {
 				model.addAttribute("userForm", new User());
 				model.addAttribute("listTab","active");
 			} catch (Exception e) {
-				model.addAttribute("formError",e.getMessage());
+				model.addAttribute("formErrorMessage",e.getMessage());
 				model.addAttribute("userForm", user);
 				model.addAttribute("formTab","active");
+				model.addAttribute("roles",roleRepository.findAll());
+				model.addAttribute("userList", userService.getAllUsers());
 			}
 		}
 

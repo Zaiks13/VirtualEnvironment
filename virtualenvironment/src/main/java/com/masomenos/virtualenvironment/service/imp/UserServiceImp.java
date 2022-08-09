@@ -36,6 +36,13 @@ public class UserServiceImp implements UserService{
 		return true;
 	}
 
+	protected void mapUser(User from,User to) {
+		to.setUsername(from.getUsername());
+		to.setFirstName(from.getFirstName());
+		to.setLastName(from.getLastName());
+		to.setEmail(from.getEmail());
+		to.setRoles(from.getRoles());
+	}
 
 	@Override
 	public User createUser(User user) throws Exception {
@@ -43,6 +50,19 @@ public class UserServiceImp implements UserService{
 			user = userRepository.save(user);
 		}
 		return user;
+	}
+
+	@Override
+	public User getUserById(Long id) throws Exception {
+		// TODO Auto-generated method stub
+		return userRepository.findById(id).orElseThrow(()-> new Exception("El usuario que buscas no existe"));
+	}
+
+	@Override
+	public User updateUser(User fromUser) throws Exception {
+		User toUser = getUserById(fromUser.getId());
+		mapUser(fromUser, toUser);
+		return userRepository.save(toUser);
 	}
 
 }
